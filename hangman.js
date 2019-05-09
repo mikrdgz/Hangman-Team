@@ -1,8 +1,6 @@
 'use strict';
 
-const characters = [
-    "Thor"
-]
+
 
 const assert = require('assert');
 const readline = require('readline');
@@ -12,11 +10,33 @@ const rl = readline.createInterface({
 });
 
 function getPrompt() {
-    // game.board.viewGrid();
+    hangMan();
     rl.question('Guess: ', () => {
     });
   }
   getPrompt();
+
+  const characters = [
+    "Thor",
+    "Spiderman",
+    "Starlord",
+    "Hulk",
+    "Rocket"
+]
+
+function makeDashes(){
+var word = words[Math.floor(Math.random() * words.length)];
+
+// Set up the amswer answerArrayvar answerArray = [];
+for (var i = 0; i < word.length; i++) {
+  answerArray[i] = "_";
+}
+}
+
+
+function hangMan() {
+
+}
 
 //Start with - for unanswered letters. Must be the length of the word.
 
