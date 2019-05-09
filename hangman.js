@@ -24,15 +24,21 @@ function getPrompt() {
     "Rocket"
 ]
 
-  const answerArray = [];
+  
 
-function makeDashes(){
-var word = characters[Math.floor(Math.random() * characters.length)];
+
+let word = characters[Math.floor(Math.random() * characters.length)];
 
 // Set up the amswer answerArrayvar answerArray = [];
+const answerArray = [];
 for (var i = 0; i < word.length; i++) {
   answerArray[i] = "_";
 }
+
+let remainingLetters = word.length;
+
+while (remainingLetters > 0) {
+  
 
 }
 
