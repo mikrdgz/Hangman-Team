@@ -22,7 +22,7 @@ function getPrompt() {
     "Starlord",
     "Hulk",
     "Rocket"
-]
+];
 
   
 
@@ -38,7 +38,7 @@ for (var i = 0; i < word.length; i++) {
 let remainingLetters = word.length;
 
 while (remainingLetters > 0) {
-  
+
 
 }
 
