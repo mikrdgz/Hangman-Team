@@ -1,48 +1,29 @@
-'use strict';
+"use strict";
+
+const characters = ["Thor", "Spiderman", "Starlord", "Hulk", "Rocket"];
+
+// generate hangman word
+
+function getWord(arr) {
+  let word = arr[Math.floor(Math.random() * arr.length)];
 
 
-
-const assert = require('assert');
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-function getPrompt() {
-    hangMan();
-    rl.question('Guess: ', () => {
-    });
+  for (let i = 0; i <= word.length; i++) {
+      getElementByID("word").innerHTML = "-";
   }
-  getPrompt();
-
-  const characters = [
-    "Thor",
-    "Spiderman",
-    "Starlord",
-    "Hulk",
-    "Rocket"
-]
-
-function makeDashes(){
-var word = words[Math.floor(Math.random() * words.length)];
-
-// Set up the amswer answerArrayvar answerArray = [];
-for (var i = 0; i < word.length; i++) {
-  answerArray[i] = "_";
 }
-}
-
 
 function hangMan() {
-
+  getWord(characters);
 }
+
+hangMan();
 
 //Start with - for unanswered letters. Must be the length of the word.
 
 // We need an input to guess a letter
 
-//If that letter is a match in the word, then we replace dashes with that letter
+function getPrompt() {}
 
 //If that letter is not a match, we need to print 'Not a match'
 
