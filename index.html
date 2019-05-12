@@ -3,22 +3,25 @@
     <title>hangman</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../my portfolio/reset.css">
+    <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p class="h1">hangman</p>
-    <h2>theme: marvel universe characters</h2>
-    <div class = "wrapper">
-        <p id="dashes">- - - - -</p>
-        <p id="lives">u have 5 lives remaining</p>
-        <form id="hangmanform">
-                <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
-                <input id="guess" name="guess" type="submit" value="Guess" />
-                <button id="restart" name="restart" type="button">Restart</button>
-        </form>
+
+    <div class="wrapper">
+        <p class="h1">hangman</p>
+        <h2>theme: marvel universe characters</h2>
+            <div class ="game">
+                <p id="dashes">- - - - - </p>
+                <p id="lives"> you have <span>5</span> lives remaining</p>
+                <form id="hangmanform">
+                    <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
+                    <input id="guess" name="guess" type="submit" value="Guess" />
+                    <button id="restart" name="restart" type="button">Restart</button>
+                </form>
+            </div>
     </div>
 
   
