@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Marvel Hangman</title>
+    <script>
+        const characters = ["Thor", "Spiderman", "Starlord", "Hulk", "Rocket"];
+        let word = characters[Math.floor(Math.random() * characters.length)
+        ].toLowerCase();
+
+        let answerArray = [];
+        let s="";
+        let count = 0;
+
+        function startGame() {
+            for(let i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+            s = answerArray.join(" ");
+            document.getElementById("answer").innerHTML = s;
+        }
+
+         function checkLetter() {
+             let letter = document.getElementById("letter").value;
+             if(letter.length > 0) {
+                 for(let i = 0; i < word.length; i++) {
+                     if(word[i] === letter) {
+                         answerArray[i] = letter;
+                     }
+                 }
+                 count++;
+                 document.getElementById("counter").innerHTML = "No. of clicks: " + count;
+                 document.getElementById("answer").innerHTML = answerArray.join(" ");
+             }
+             if(count > 5) {
+                 document.getElementById("start").innerHTML = "You exceeded more than allowed attempts!";
+             }
+         }
+    </script>
 </head>
-<body>
-    <header>
-<h2>Marvel Hangman!</h2>
-<h3>Can you figure out which character it is?</h3>
-</header>
-
-<div id="word"></div>
-
-<div id="form">
-    <br>
-    Guess a letter:
-    <input type="text" id="guess">
-    <input type="button" value="Guess" onclick="checkValue()">	 
-</div>
-
-<script src="hangman.js"></script>
+<body onload="startGame()">
+    <h1>Guess a letter</h1>
+    <input id = "letter" type="text">
+    <input type="button" value="letter" onclick="checkLetter()"/>
+    <p id="answer"></p>
+    <p id="counter"></p>
+    <p id="stat"></p>
 </body>
+
+<!-- <body>
+    <header>
+        <h2>Marvel Hangman!</h2>
+        <h3>Can you figure out which character it is?</h3>
+    </header>
+
+
+
+    <div id="form">
+        <br>
+        Guess a letter:
+        <input type="text" id="guess">
+        <input type="button" value="Guess" id = "mybutton" onclick="hangMan()">
+    </div>
+
+
+    <div id="word"></div>
+    <script src="hangman.js"></script>
+</body> -->
+
+
 
 </html>
