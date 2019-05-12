@@ -67,11 +67,21 @@ span {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 #answer {
     margin: 10px 0;
     font-size: 50px;
+}
+input[type=button] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }

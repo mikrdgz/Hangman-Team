@@ -40,6 +40,7 @@
             }
             else if (letter.length === 1 && letter.length > 0) {
                 document.getElementById("emptyinput").innerHTML = "";
+                document.getElementById("noofguesses").innerHTML = `You have ${numberOfGuesses--} guesses left!`;
                 for (let i = 0; i < numberOfLetters; i++) {
                     if (word[i] === letter) {
                         answerArray[i] = letter;
@@ -53,7 +54,7 @@
                         document.getElementById("letter").focus();
                     }
                 }
-                numberOfGuesses--;
+                //numberOfGuesses--;
                 if (numberOfGuesses === 0) {
                     document.getElementById("noofguesses").innerHTML = `You have ${numberOfGuesses} guesses left!`;
                     document.getElementById("answer").innerHTML = "";
