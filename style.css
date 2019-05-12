@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.h1 {
+    padding: 20px 20px 5px 20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4em;
+    letter-spacing: 2px;
+    animation: colorchange 30s infinite alternate;
+}
+
+@keyframes colorchange
+{
+ 0%   {color: #ff4c4c;}
+ 25%  {color: #c94c70;}
+ 50%  {color: #8c4c8c;}
+ 75%  {color: #7560a0;}
+ 100% {color: #4c7eaf;}
+}
+
+h2 {
+    padding: 0px 10px 10px 10px; 
+    font-size: 1em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
