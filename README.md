@@ -2,7 +2,7 @@
 This is a hangman Javascript game
 ---
 ## Authors:
-#### Mikalera Rodriguez
+#### Mikaelar Rodriguez
 #### Kiley Lewis
 #### Sarad Rajbhandari
 ---
